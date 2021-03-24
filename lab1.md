@@ -60,7 +60,7 @@ monitor_port = /dev/cu.usbserial-1420
 ;monitor_port = COM3
 monitor_speed = 115200
 ```
-5.อัพโหลดโปรแกรม 01_Serial Monitor เข้าไปยัง microcontroller โดยใช้คำสั่ง upload
+4.อัพโหลดโปรแกรม 01_Serial Monitor เข้าไปยัง microcontroller โดยใช้คำสั่ง upload
 - พิมพ์ pio run -t upload
 - ในขณะที่ program กำลังรันข้อมูล เพื่อให้ microcontroller รับโปรแกรมใหม่เข้าไป
   - กดปุ่มสีดำ เพื่อทำให้เกิดการ load 
