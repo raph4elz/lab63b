@@ -74,26 +74,32 @@ void loop()
   - พิมพ์ pio device monitor
     - ค่าที่อ่านได้เป็น 1 ตลอด ดังภาพ
 
-![image](https://user-images.githubusercontent.com/80879966/112141149-86410580-8c07-11eb-8024-c3718b21e5cb.jpg)
+![111](https://user-images.githubusercontent.com/81258597/112337225-4e61bd00-8cf0-11eb-806a-7bcce56b98ba.png)
+
 
 - สายไฟเส้นสีขาว คือ port 0 ถ้าเอาสายไฟเส้นนี้ไปจิ้มจะมีค่าเป็น 0 Volt
   - นำสายไฟเส้นสีขาว จิ้มกับช่องที่มีสายสีดำเสียบอยู่ output อ่านค่าได้เป็น 0 ดังภาพ
   
-![image](https://user-images.githubusercontent.com/80879966/112145978-9bb92e00-8c0d-11eb-9cfd-d1d932cd2504.jpg)
+![0000](https://user-images.githubusercontent.com/81258597/112337299-5e799c80-8cf0-11eb-8641-b5a46eaa4f84.png)
+
   
   - ปล่อยสายไฟเส้นสีขาวออกจาก ช่องที่มีสายสีดำ output เปลี่ยนกลับเป็น 1
   - นำสายไฟสีขาวไปจิ้มที่เส้นสีแดง หรือ HIGH(on) out put อ่านค่าได้เป็น 1 เช่นเดียวกัน
 
-![image](https://user-images.githubusercontent.com/80879966/112145984-9d82f180-8c0d-11eb-9977-d7e8e5682249.jpg)
+![42424](https://user-images.githubusercontent.com/81258597/112337387-718c6c80-8cf0-11eb-8c9f-b91388f2eb10.png)![2222](https://user-images.githubusercontent.com/81258597/112337472-849f3c80-8cf0-11eb-8a3e-e7c32a4b0c8a.png)
+
   
   microcontroller ESP-01 ตามปกติเราจะกดที่ปุ่มสีดำที่ต้องกดตอนโปรแกรมที่ผ่านมา ซึ่งในการทดลองนี้ปุ่มสีดำได้ต่ออยู่กับ port 0 
   - เมื่อลองกดที่ปุ่มสีดำ ค่าที่ได้ออกมาจะมีค่าเช่นเดียวกับการกดport 0 ส่งผลให้ไฟติดดังภาพ
 
-![image](https://user-images.githubusercontent.com/80879966/112144832-3add2600-8c0c-11eb-86ea-446ec0fa337f.jpg)
+![2222](https://user-images.githubusercontent.com/81258597/112337578-9f71b100-8cf0-11eb-9e25-0f38cdcace66.png)
+
+
 
   - เมื่อปล่อยมือจากปุ่มสีดำ ไฟจะดับ และค่าที่อ่านได้เป็น 1 ดังภาพ
 
-![image](https://user-images.githubusercontent.com/80879966/112144869-3dd81680-8c0c-11eb-908e-643573ce9f53.jpg)
+![wrwr](https://user-images.githubusercontent.com/81258597/112337554-97b20c80-8cf0-11eb-8da1-69179ebedbff.png)
+
 
 5. นำ CPU มาต่อกับ sensorแสง (sensorแสงนั้นต่ออยู่กับตัวต้านทาน)
 - ขาข้างแรก ต่อกับไฟเลี้ยงของCPU เส้นสีแดง(ขนาด 3 Volt)
