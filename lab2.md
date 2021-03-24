@@ -69,7 +69,7 @@ void loop()
      - กดปุ่มสีดำ เพื่อทำให้เกิดการ load 
      - กดปุ่มสีแดง เพื่อให้เกิดการ reset
 
-![image](https://user-images.githubusercontent.com/80879678/112092578-62ab9a00-8bca-11eb-853f-540fc48be65c.jpg)
+![พๆพๆพ](https://user-images.githubusercontent.com/81258597/112376999-c5f71280-8d17-11eb-8d68-1d09c9fa05a0.png)
 
    - สังเกตผลลัพธ์ที่แสดงผลผ่านคอมพิวเตอร์
      - พิมพ์ pio device monitor
