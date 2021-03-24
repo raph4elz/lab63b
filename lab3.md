@@ -25,7 +25,6 @@
   - ไปที่ตัวอย่างที่ 3
     - พิมพ์ cd 03_Output-Port
     
-![image](https://user-images.githubusercontent.com/80879942/112137666-1e88bb80-8c03-11eb-866b-b516ad5036b6.jpg)
 
 4. ดู source code program 
 - พิมพ์ vi src/main.cpp
