@@ -17,8 +17,8 @@ https://www.youtube.com/watch?v=T26DVHePlTs
 2. ดูที่ตัวอย่างโปรแกรม ที่โฟลเดอร์ pattani
 - พิมพ์ cd pattani เพื่อไปยังโฟลเดอร์
 - แสดงโฟลเดอร์ ซึ่งมีโปรแกรมตัวอย่าง 9 โปรแกรม
-  - ไปที่ตัวอย่างที่ 6
-    - พิมพ์ cd 06_Wifi-AP-Web-Server
+  - ไปที่ตัวอย่างที่ X
+    - พิมพ์ cd 0X_Wifi-AP-Web-Server
 3. ดู source code program 
 - พิมพ์ vi src/main.cpp
 
@@ -68,34 +68,39 @@ void loop(void){
 
 - กำหนด ชื่อ และ ตั้งpassword
 
-![image](https://user-images.githubusercontent.com/80879678/112093962-ea92a380-8bcc-11eb-8b5d-9c367a3b9449.jpg)
+![wee](https://user-images.githubusercontent.com/81258597/112364328-f8e5da00-8d08-11eb-92a3-ec566fde447e.png)
+
 
 - กำหนด IPAdress, gateway, subnet
 
-![image](https://user-images.githubusercontent.com/80879678/112094552-13676880-8bce-11eb-840f-558fcd636b35.jpg)
+![eee](https://user-images.githubusercontent.com/81258597/112364388-09965000-8d09-11eb-9069-4c8761da4de0.png)
+
 
 - เตรียม web server
 
-![image](https://user-images.githubusercontent.com/80879678/112094082-32192f80-8bcd-11eb-9905-b37362433e7a.jpg)
+![wed](https://user-images.githubusercontent.com/81258597/112364444-19159900-8d09-11eb-9585-ed6f7249e345.png)
+
 
 - รันคำสั่ง softAP แล้วกำหนด ssiad กับ password
 
-![image](https://user-images.githubusercontent.com/80879678/112094155-537a1b80-8bcd-11eb-9f3f-7429cc1003ca.jpg)
+![rq](https://user-images.githubusercontent.com/81258597/112364613-4cf0be80-8d09-11eb-895e-26c7e80ac2b8.png)
+
 
 4. อัปโหลดโปรแกรม 06_Wifi-AP-Web-Server เข้าไปยัง microcontroller โดยใช้คำสั่ง upload
   - พิมพ์ pio run -t upload
 
-![image](https://user-images.githubusercontent.com/80879678/112094212-6ee52680-8bcd-11eb-963f-b78ec3414b97.jpg)
+![pio ](https://user-images.githubusercontent.com/81258597/112364711-62fe7f00-8d09-11eb-9076-74b1eac9e4e9.png)
+
 
   - ในขณะที่ program กำลังรันข้อมูล เพื่อให้ microcontroller รับโปรแกรมใหม่เข้าไป
     - กดปุ่มสีแดง เพื่อให้เกิดการ reset
  
-![image](https://user-images.githubusercontent.com/80879678/112094256-88866e00-8bcd-11eb-8bab-dc64b6cff485.jpg)
+![pass red](https://user-images.githubusercontent.com/81258597/112364781-790c3f80-8d09-11eb-8138-c73b7a615c0e.png)
+
 
 5. ตรวจสอบว่า wifi ที่สร้างขึ้นนั้นแสดงผลหรือยัง 
     - พิมพ์ pio device monitor
 
-![image](https://user-images.githubusercontent.com/80879678/112094298-9cca6b00-8bcd-11eb-84ab-2dc865285aca.jpg)
 
 6. ใช้โทรศัพท์โทรศัพท์มือถือค้นหา wifi
 
