@@ -38,9 +38,32 @@ void loop()
 	delay(1000);
 }
 ```
+
+1. คำสั่งต่อไปนี้ ![Screenshot 2021-03-24 174143](https://user-images.githubusercontent.com/81258597/112302624-dda9a900-8ccd-11eb-8f1a-6552084ee02f.png) จะเป็นการบอกข้อมูลของplatform
+ 
+```Javascript
+; IOT for KIDS
+;
+; By Dr.Choompol Boonmee
+; 
+
+[env:exercise01]
+platform = espressif8266
+board = esp01_1m
+framework = arduino
+board_build.flash_mode = dout
+
+upload_port = /dev/cu.usbserial-1420
+;upload_port = COM3
+
+monitor_port = /dev/cu.usbserial-1420
+;monitor_port = COM3
+monitor_speed = 115200
+```
 ## การบันทึกผลการทดลอง
 
 ## อภิปรายผลการทดลอง
  1. platformio นั้น สามารถใช้เขียนโปรแกรมจาก microcontroller หลายชนิดที่มีบริษัทต่างกันได้ โดย คำสั่ง platformio.ini เป็นเหมือนตัวแสดงผลว่าการเขียนโปรแกรมครั้งนี้เราจะเขียนให้กับ microcontroller ตัวไหน
  2. pio run -t upload นั้นใช้ในการอัพโหลดข้อมูลไปยัง microcontroller โดยสามารถกดปุ่มซึ่งอยู่ภายนอก microcontroller เพื่อทำการโหลดและรีเซ็ตการรันโปรแกรมได้
 ## คำถามหลังการทดลอง
+ถ้าลงโปรเเกรมเข้าต้องกดปุ่มใด 
