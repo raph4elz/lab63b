@@ -110,7 +110,8 @@ void loop(void){
 ## อภิปรายผลการทดลอง (พร้อมตัวอย่าง)
    จากการทดลองดังกล่าว โปรแกรม 06_Wifi-AP-Web-Server ทำให้เราสามารถสร้าง Wifi Access Point ขึ้นมาเองได้ และตรวจสอบพบว่ามีอยู่จริง ดังภาพ
    
-![image](https://user-images.githubusercontent.com/80879678/112094339-ad7ae100-8bcd-11eb-98da-a0eb09f63ef6.jpg)
+![1231](https://user-images.githubusercontent.com/81258597/112365065-ca1c3380-8d09-11eb-85c2-c30da5767f9a.png)
+
 
 ## คำถามหลังการทดลอง 
 หากทำตามขั้นตอนดังกล่าว จะสามารถสร้าง Wifi Access Point ได้เอง
