@@ -62,7 +62,8 @@ void loop()
 4. อัพโหลดโปรแกรม 02_Scan-Wifi เข้าไปยัง microcontroller โดยใช้คำสั่ง upload
    - พิมพ์ pio run -t upload
 
-![image](https://user-images.githubusercontent.com/80879678/112092429-0c3e5b80-8bca-11eb-9138-49a05fa33128.jpg)
+![AQ](https://user-images.githubusercontent.com/81258597/112329061-6f72df80-8ce9-11eb-93e0-b354495d4d56.png)
+
 
    - ในขณะที่ program กำลังรันข้อมูล เพื่อให้ microcontroller รับโปรแกรมใหม่เข้าไป
      - กดปุ่มสีดำ เพื่อทำให้เกิดการ load 
