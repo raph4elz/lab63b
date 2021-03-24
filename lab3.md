@@ -75,7 +75,7 @@ void loop()
 
 6. นำ microcontroller ต่อเข้ากับ Relay เพื่อให้ Relay ทำหน้าที่เปิด-ปิดสวิตซ์ 
 
-![image](https://user-images.githubusercontent.com/80879942/112144123-5eec3780-8c0b-11eb-94d0-840e7917e15a.jpg)
+![ww](https://user-images.githubusercontent.com/81258597/112336784-f6c35180-8cef-11eb-9806-ee6b3a5324b4.png)
 
 7. นำแหล่งจ่ายไฟมาต่อเข้ากับตัว Relay เพื่อจ่ายไฟให้ Relay ทำงานได้
    - ผลลัพธ์ออกมาเป็น on off สลับกันไปเรื่อยๆ ดังภาพ
