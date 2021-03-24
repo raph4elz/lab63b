@@ -5,5 +5,5 @@
 
 
 ##อุปกรณ์ที่ใช้ 
-1.microcontroller ESP-01 ที่ประกอบไปด้วย CPU เสาอากาศสำหรับ WIFI
-2.อุปกรณ์เชื่อมต่อ USB เข้าไปยัง serial
+ # 1.microcontroller ESP-01 ที่ประกอบไปด้วย CPU เสาอากาศสำหรับ WIFI
+ # 2.อุปกรณ์เชื่อมต่อ USB เข้าไปยัง serial
