@@ -70,17 +70,17 @@ monitor_speed = 115200
 
 - อัพโหลดเข้า microcontroller เสร็จสิ้น
 
-![image](https://user-images.githubusercontent.com/80879966/112025795-1b8cbd00-8b68-11eb-89e9-aa61561284e4.jpg)
-
 - สังเกตผลลัพธ์ที่แสดงผลผ่านคอมพิวเตอร์
   - พิมพ์ pio device monitor
     - PATTANI แสดงถึง ตัวแปรcountที่ถูก impliment ทีละ1,2,3ไปเรื่อยๆ โดยแสดงผลทุก 1 วินาที
 
-![image](https://user-images.githubusercontent.com/80879966/112079578-038e5b00-8bb3-11eb-9a51-9aeab6db344d.jpg)
+![RQRQ](https://user-images.githubusercontent.com/81258597/112376729-613bb800-8d17-11eb-868b-026ae70144b4.png)
+
 
    - กดปุ่มสีแดง เพื่อทำการ reset โปรแกรม  โดยโปรแกรมจะหยุดทำงานและเริ่มนับ 1 ใหม่
 
-![image](https://user-images.githubusercontent.com/80879966/112079589-0721e200-8bb3-11eb-89ac-e9135632f920.jpg)
+![RQRQ2R2](https://user-images.githubusercontent.com/81258597/112376791-757fb500-8d17-11eb-8deb-a7e329f815b6.png)
+
 
 ## การบันทึกผลการทดลอง
 คำสั่ง | ผลลัพธ์ที่แสดง
