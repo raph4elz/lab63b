@@ -60,14 +60,16 @@ monitor_port = /dev/cu.usbserial-1420
 ;monitor_port = COM3
 monitor_speed = 115200
 ```
-![image](https://user-images.githubusercontent.com/80879966/112024929-41659200-8b67-11eb-8684-a86257d30a28.jpg)
-
-
 5.อัพโหลดโปรแกรม 01_Serial Monitor เข้าไปยัง microcontroller โดยใช้คำสั่ง upload
 - พิมพ์ pio run -t upload
 - ในขณะที่ program กำลังรันข้อมูล เพื่อให้ microcontroller รับโปรแกรมใหม่เข้าไป
   - กดปุ่มสีดำ เพื่อทำให้เกิดการ load 
   - กดปุ่มสีแดง เพื่อให้เกิดการ reset
+
+![image](https://user-images.githubusercontent.com/80879966/112024929-41659200-8b67-11eb-8684-a86257d30a28.jpg)
+
+- อัพโหลดเข้า microcontroller เสร็จสิ้น
+
 ![image](https://user-images.githubusercontent.com/80879966/112025795-1b8cbd00-8b68-11eb-89e9-aa61561284e4.jpg)
 
 - สังเกตผลลัพธ์ที่แสดงผลผ่านคอมพิวเตอร์
@@ -87,3 +89,4 @@ monitor_speed = 115200
  2. pio run -t upload นั้นใช้ในการอัพโหลดข้อมูลไปยัง microcontroller โดยสามารถกดปุ่มซึ่งอยู่ภายนอก microcontroller เพื่อทำการโหลดและรีเซ็ตการรันโปรแกรมได้
 ## คำถามหลังการทดลอง
 ถ้าลงโปรเเกรมเข้าต้องกดปุ่มใด 
+* ตอบ สีดำ
