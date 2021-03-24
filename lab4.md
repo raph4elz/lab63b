@@ -86,7 +86,7 @@ void loop()
   - ปล่อยสายไฟเส้นสีขาวออกจาก ช่องที่มีสายสีดำ output เปลี่ยนกลับเป็น 1
   - นำสายไฟสีขาวไปจิ้มที่เส้นสีแดง หรือ HIGH(on) out put อ่านค่าได้เป็น 1 เช่นเดียวกัน
 
-![42424](https://user-images.githubusercontent.com/81258597/112337387-718c6c80-8cf0-11eb-8c9f-b91388f2eb10.png)![2222](https://user-images.githubusercontent.com/81258597/112337472-849f3c80-8cf0-11eb-8a3e-e7c32a4b0c8a.png)
+![42424](https://user-images.githubusercontent.com/81258597/112337387-718c6c80-8cf0-11eb-8c9f-b91388f2eb10.png)
 
   
   microcontroller ESP-01 ตามปกติเราจะกดที่ปุ่มสีดำที่ต้องกดตอนโปรแกรมที่ผ่านมา ซึ่งในการทดลองนี้ปุ่มสีดำได้ต่ออยู่กับ port 0 
@@ -108,16 +108,19 @@ void loop()
 
 (ภาพแสดงการต่อขาของ sensorแสง เข้ากับ CPU)
 
-![image](https://user-images.githubusercontent.com/80879966/112153543-f2c30100-8c15-11eb-815a-4ae3df03f124.jpg)
+![1a](https://user-images.githubusercontent.com/81258597/112338171-2757bb00-8cf1-11eb-993e-550b308bd11c.png)
+
 
 - นำ input เส้นสีขาวต่อกับ sensor 
   - ไฟ LED จะสว่าง เมื่อ sensor โดนแสงสว่าง ค่าที่อ่านได้เป็น 0 ดังภาพ
 
-![image](https://user-images.githubusercontent.com/80879966/112155932-5f3eff80-8c18-11eb-8005-e237aa2f2665.jpg)
+![1b](https://user-images.githubusercontent.com/81258597/112338197-2de63280-8cf1-11eb-81ff-98dc926e7dad.png)
+
 
   - ไฟ LED จะดับ เมื่อนำนิ้วไปปิดหน้า sensor ค่าที่อ่านได้เป็น 1 ดังภาพ
 
-![image](https://user-images.githubusercontent.com/80879966/112155944-6108c300-8c18-11eb-81e2-777c84f642a9.jpg)
+![1C](https://user-images.githubusercontent.com/81258597/112338213-32aae680-8cf1-11eb-87cc-ea60f66ad434.png)
+
 
 ## การบันทึกผลการทดลอง 
 
