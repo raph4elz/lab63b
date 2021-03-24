@@ -19,12 +19,12 @@ https://www.youtube.com/watch?v=VX-QNQcO-b4
   - ไปที่ตัวอย่างที่ 5
     - พิมพ์ cd 05_Wifi-Web-Server
 2. ดู source code program โดยจะแสดงเป็นสองส่วน
-- พิมพ์ vi src/main.cpp
-- โปรแกรมนี้เป็นการเชื่อมต่อ wifi จึงต้องใส่ชื่อ wifi และ password
-- ส่วนของ set up เป็นการเชื่อมต่อ wifi ที่ใส่ชื่อตอนแรก
+ 1. พิมพ์ vi src/main.cpp
+ 1. โปรแกรมนี้เป็นการเชื่อมต่อ wifi  เลยต้องเชื่อม wifi ก่อน
+ 1. ส่วนของ set up เป็นการเชื่อมต่อ wifi ที่ใส่ชื่อตอนแรก
   - set up webserver แสดงผลเป็น Hello cnt
   - cnt++ หมายถึง การนับเพิ่มเรื่อยๆ 
-- ส่วนของ loop
+ 4. ส่วนของ loop
 
 ```javascript
 #include <ESP8266WiFi.h>
@@ -80,10 +80,10 @@ void loop(void){
    - ในขณะที่ program กำลังรันข้อมูล เพื่อให้ microcontroller รับโปรแกรมใหม่เข้าไป
      - กดปุ่มสีแดง เพื่อให้เกิดการ reset 
 
-   - สังเกตผลลัพธ์ที่แสดงผลผ่านคอมพิวเตอร์
-     - พิมพ์ pio device monitor 
-     - ผลลัพธ์ที่แสดง คือ ip address
-     - copy ip adress ไปที่ browser สำหรับทดสอบ
+   - พิมพ์คำสั่งให้แสดงผลผ่านจอคอม
+     1. พิมพ์ pio device monitor 
+     1. ผลลัพธ์ที่แสดง คือ ip address
+     1. copy ip adress ไปที่ browser สำหรับทดสอบ
      
 ## การบันทึกผลการทดลอง 
 การใช้คำสั่ง pio device monitor เพื่อดูผลลัพธ์ของการรันโปรแกรมในไมโครคอนโทรเลอร์ ได้แสดงที่อยู่ไอพีขึ้นมา 
