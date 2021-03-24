@@ -1,3 +1,4 @@
+
 # การทดลองที่ 1 เรื่อง การเขียนโปรแกรมเพื่อรันบนไมโครคอนโทรเลอร์
 
 ## วัตถุประสงค์
@@ -13,9 +14,31 @@
   
 ##วิธีการทำการทดลอง 
 1. เสียบ microcontroller เข้าทาง serial port
- ![GitHub Logo](/images/Screenshot 2021-03-24 172303.png)
+ * ![Screenshot 2021-03-24 172303](https://user-images.githubusercontent.com/81258597/112295479-86eca100-8cc6-11eb-8868-8c1773c470cb.png)
+1. ดูที่ตัวอย่างโปรแกรม ที่โฟลเดอร์ pattani 
+ * พิมพ์ cd 01_Serial Monitor
+ * ![Screenshot 2021-03-24 174015](https://user-images.githubusercontent.com/81258597/112297151-1d6d9200-8cc8-11eb-8bf7-ebca00c4b1b5.png)
+ * พิมพ์ vi src/main.cpp
+ * ![Screenshot 2021-03-24 174143](https://user-images.githubusercontent.com/81258597/112297268-468e2280-8cc8-11eb-902f-1083b1610e8f.png)
+ จะโชว์ code ตัวอย่างให้เราเห็น
+ ```Javascript
+ #include <Arduino.h>
 
-##การบันทึกผลการทดลอง
+int cnt = 0;
+
+void setup()
+{
+	Serial.begin(115200);
+}
+
+void loop()
+{
+	cnt++;
+	Serial.printf("PATTANI :%d\n",cnt);
+	delay(1000);
+}
+```
+## การบันทึกผลการทดลอง
 
 ## อภิปรายผลการทดลอง
  1. platformio นั้น สามารถใช้เขียนโปรแกรมจาก microcontroller หลายชนิดที่มีบริษัทต่างกันได้ โดย คำสั่ง platformio.ini เป็นเหมือนตัวแสดงผลว่าการเขียนโปรแกรมครั้งนี้เราจะเขียนให้กับ microcontroller ตัวไหน
