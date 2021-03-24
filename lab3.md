@@ -84,10 +84,9 @@ void loop()
 
      - ไฟสีน้ำเงิน ไม่ติดเลย
      -   ![Screenshot 2021-03-24 222333](https://user-images.githubusercontent.com/81258597/112336489-b4017980-8cef-11eb-928f-b62594afeb6b.png)
-     -  ![Screenshot 2021-03-24 222345](https://user-images.githubusercontent.com/81258597/112336559-bfed3b80-8cef-11eb-8cc1-0b272572039e.png)
+     
 
  
-
 
 ## การบันทึกผลการทดลอง 
 
