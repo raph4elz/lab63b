@@ -80,9 +80,14 @@ void loop()
 7. นำแหล่งจ่ายไฟมาต่อเข้ากับตัว Relay เพื่อจ่ายไฟให้ Relay ทำงานได้
    - ผลลัพธ์ออกมาเป็น on off สลับกันไปเรื่อยๆ ดังภาพ
      - ไฟสีเขียวติดๆดับๆ สลับกัไป
+     - ![Screenshot 2021-03-24 222345](https://user-images.githubusercontent.com/81258597/112336559-bfed3b80-8cef-11eb-8cc1-0b272572039e.png)
+
      - ไฟสีน้ำเงิน ไม่ติดเลย
+     -   ![Screenshot 2021-03-24 222333](https://user-images.githubusercontent.com/81258597/112336489-b4017980-8cef-11eb-928f-b62594afeb6b.png)
+     -  ![Screenshot 2021-03-24 222345](https://user-images.githubusercontent.com/81258597/112336559-bfed3b80-8cef-11eb-8cc1-0b272572039e.png)
+
  
-![image](https://user-images.githubusercontent.com/80879966/112169029-69ff9180-8c24-11eb-82cb-c5d9968e9d20.jpg)
+
 
 ## การบันทึกผลการทดลอง 
 
