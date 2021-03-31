@@ -1,18 +1,34 @@
-# การทดลองที่ 7 การใช้LEDควบคุมการค้นหาไวไฟแอคเซสพอยต์
+# การทดลองที่ 7 ปิด เปิด ไฟ LED ผ่าน WiFi
 
 ## วัตถุประสงค์
 1. เพื่อเข้าใจเกี่ยวกับโครงสร้างของ code program และปรับแต่ง
-3. เพื่อคิดค้นการทำงานที่จะใช้ผ่าน microcontroller รูปแบบใหม่
-4. เพื่อทำการประยุกต์ใช้ความรู้ที่ศึกษาจากข้อมูลที่ได้ศึกษาจากทุกแลป
+2. เพื่อคิดค้นการทำงานที่จะใช้ผ่าน microcontroller รูปแบบใหม่
+3. เพื่อทำการประยุกต์ใช้ความรู้ที่ศึกษาจากข้อมูลที่ได้ศึกษาจากทุกแลป
 
 ## อุปกรณ์ที่ใช้
-1. CPU
-2. adapter
-3. หลอด LED เปล่งแสง
-4. microcontroller ESP-01
-5. อุปกรณ์เชื่อมต่อ USB เข้าไปยัง serial
+1. Arduino UNO R3 - Made in italy
 
-6. wifi ที่ต้องการเชื่อมกับ microcontroller
+2. ESP8266 ESP-01 Wireless WIFI Module
+
+3. ไอซีเร็กกูเลเตอร์ LD1117
+
+4. คาปาซิเตอร์ 100 nF
+
+5. คาปาซิเตอร์ 10 uF
+
+6. สาย Jumper Female to Male ยาว 20cm.
+
+7. สาย Jumper Male to Male ยาว 20cm.
+
+8. Prototype PCB Board 4x6 cm Double Sides 2 ชิ้น
+
+9. สกรูหัวกลม+น็อตตัวเมีย ขนาด 3มม ยาว 12มม
+
+10. Relay 1 Channel DC 5V Module
+
+11. SMD LED Lighting G4 AC DC 12V
+
+12. รางถ่าน AA 8 ก้อน
 
 ## แหล่งข้อมูลเพื่อการศึกษา
 - หาที่อยู่ IP adress 
@@ -47,148 +63,128 @@
   - https://github.com/choompol-boonmee/lab63b/tree/master/examples
 
 ## วิธีการทำการทดลอง
-1. เขียนโปรแกรมบน microcontroller โดยทำการเสียบ microcontroller เข้าทาง serial port ของ USB 
+1. ต้องแก้ไข ไอพี ของ ESP8266 ESP-01 ให้ตรงกับที่เราได้รับมาจาก Router
 
-(จากซ้ายไปขวา microcontroller ESP-01, อุปกรณ์เชื่อมต่อ USB และ การเสียบเข้าทาง serial port ตามลำดับ)
+![Screenshot 2021-04-01 005030](https://user-images.githubusercontent.com/81258597/113188464-48d21d00-9284-11eb-9fb2-27b302c2556d.png)
 
-![image](https://user-images.githubusercontent.com/80879966/112019858-6dcadf80-8b62-11eb-8370-cc9b002280f5.jpg)
 
-2. ดูที่ตัวอย่างโปรแกรม ที่โฟลเดอร์ pattani
-- พิมพ์ cd pattani เพื่อไปยังโฟลเดอร์
-- แสดงโฟลเดอร์ ซึ่งมีโปรแกรมตัวอย่าง 9 โปรแกรม
-  - ไปที่ตัวอย่างที่ 7
-    - พิมพ์ cd 07_Sensor-wifi
-    - พิมพ์ vi src/main.cpp
+2. การต่อวงจร ระหว่าง ESP8266 ESP-01 กับ Arduino UNO
+![Screenshot 2021-04-01 012649](https://user-images.githubusercontent.com/81258597/113192742-5a69f380-9289-11eb-9a12-e666bbdb0750.png)
 
-3. ดู source code program 
-- พิมพ์ vi src/main.cpp
-- โดยข้อมูลเบื้องต้นของ code มีความหมายดังนี้
-  - const char* ssid หมายถึง ชื่อ wifi
-  - const char* password หมายถึง รหัสผ่าน wifi
-  - IPAddress local_ip หมายถึง IP address หรือ Network address
-  - IPAddress gateway หมายถึง Default gateway
-  - IPAddress subnet หมายถึง Subnet Mask
- - ส่วนของ set up
-   - Serial.beginset up หมายถึง การ set up serial port ที่ความเร็ว 115200
-   - set up ให้ io port มี 2 อัน
-      - pinMode บรรทัดแรก หมายถึง port 0 (สายสีขาว) เป็น input
-      - pinMode บรรทัดถัดมา หมายถึง port 2 (สายสีเหลือง) เป็น output
-   - WiFi.softAP หมายถึง การรันคำสั่ง softAP และกำหนด ssiad, password
-   - delay(1000) หมายถึง ช่วงเวลา 1000 ms หรือ 1 วินาที
- - ส่วนของ loop
-   - digitalRead() หมายถึง การอ่านข้อมูลจาก port ซึ่งในตัวอย่างหมายถึง port 0 (ข้อมูลที่อ่านได้เป็นข้อมูล digital ซึ่งมีแค่ค่า 0 หรือ 1)
-      - หากค่าที่อ่านได้ เป็น 1 ให้ HIGH ไปที่ port 2 (หากเป็นหลอดไฟหมายถึงไฟติด)
-      - หากค่าที่อ่านได้ เป็น 0 ให้ LOW ไปที่ port 2 (หากเป็นหลอดไฟหมายถึงไฟดับ)
-    โดยในที่นี้หมายความว่า port 0 เป็นตัวควบคุมสัญญาณ input ให้ไฟเปิด หรือ ปิด
-   - delay(2000) หมายถึง ช่วงเวลา 2000 ms หรือ 2 วินาที
-    
+
+3. ต่อวงจร ระหว่าง Relay กับ Arduino UNO
+  ![Screenshot 2021-04-01 012736](https://user-images.githubusercontent.com/81258597/113192829-779ec200-9289-11eb-8d9c-8c7f43096044.png)
+
+4. ต่อวงจร ระหว่าง UNO+ Relay + LED + รางถ่าน
+   ![Screenshot 2021-04-01 015722](https://user-images.githubusercontent.com/81258597/113196394-a9198c80-928d-11eb-9ada-12edb4aa98f6.png)
+
+
+
+5. อัพโหลดโค้ด ไปยัง  Arduino UNO   
 ```javascript
-#include <ESP8266WiFi.h>
-//#include <WiFiClient.h>
-#include <ESP8266WebServer.h>
+#include <SoftwareSerial.h>
 
-const char* ssid = "EELAB-0058";
-const char* password = "vichamaporn";
+#define TIMEOUT 5000 // mS
+#define LED 5
+SoftwareSerial mySerial(7, 6); // RX, TX
 
-IPAddress local_ip(172, 20, 10, 14);
-IPAddress gateway(172, 20, 10, 1);
-IPAddress subnet(255, 255, 255, 244);
 
-ESP8266WebServer server(80);
-
-int cnt = 0;
-
-void setup(void){
-	Serial.begin(115200);
-	
-	pinMode(0, INPUT);
- 	pinMode(2, OUTPUT);
- 	Serial.println("\n\n\n");
-	
-		WiFi.softAP(ssid, password);
-		WiFi.softAPConfig(local_ip, gateway, subnet);
-		delay(1000);
-
-		server.onNotFound([]() {
-			server.send(404, "text/plain", "ERROR! Path Not Found");
-	});
-
-		server.on("/", []() {
-			cnt++;
-			String msg = "Hello cnt: ";
-			msg += cnt;
-			server.send(200, "text/plain", msg);
-	
-	});
-
-	server.begin();
-	Serial.println("HTTP server started");
+void setup()
+{
+ pinMode(LED,OUTPUT);
+ Serial.begin(115200);
+ mySerial.begin(115200);
+ SendCommand("AT+RST", "Ready");
+ delay(5000);
+ SendCommand("AT+CWMODE=1","OK");
+ SendCommand("AT+CIFSR", "OK");
+ SendCommand("AT+CIPMUX=1","OK");
+ SendCommand("AT+CIPSERVER=1,80","OK");
 }
 
-void loop(void){
-int val = digitalRead(1);
- Serial.printf("======= read %d\n", val);
- if(val==1) {
-  digitalWrite(2, HIGH);
- } else {
-  digitalWrite(2, LOW);
+void loop(){
+
+
+  
+ String IncomingString="";
+ boolean StringReady = false;
+
+ while (mySerial.available()){
+   IncomingString=mySerial.readString();
+   StringReady= true;
+  }
+
+  if (StringReady){
+    Serial.println("Received String: " + IncomingString);
+  
+  if (IncomingString.indexOf("LED=ON") != -1) {
+    digitalWrite(LED,HIGH);
+   }
+
+  if (IncomingString.indexOf("LED=OFF") != -1) {
+    digitalWrite(LED,LOW);
+   }
+  }
  }
- delay(2000);
- server.handleClient();
+
+boolean SendCommand(String cmd, String ack){
+  mySerial.println(cmd); // Send "AT+" command to module
+  if (!echoFind(ack)) // timed out waiting for ack string
+    return true; // ack blank or ack found
 }
+
+boolean echoFind(String keyword){
+ byte current_char = 0;
+ byte keyword_length = keyword.length();
+ long deadline = millis() + TIMEOUT;
+ while(millis() < deadline){
+  if (mySerial.available()){
+    char ch = mySerial.read();
+    Serial.write(ch);
+    if (ch == keyword[current_char])
+      if (++current_char == keyword_length){
+       Serial.println();
+       return true;
+    }
+   }
+  }
+ return false; // Timed out
+}
+
 ```
 
-4.เข้าไปที่ configuration file ใน program
-- พิมพ์ vi platformio.ini เพื่อแสดงข้อมูล
-  - platform แสดงถึง เทคโนโลยีของบริษัทผู้ผลิต
-  - board แสดงถึง ชื่อบอร์ด
-  - framwork แสดงถึง วิธีการเขียนโปรแกรม
-  - upload_port แสดงถึง portที่ใช้ติดต่อ 
-    - ในกรณีนี้เป็น windows จึงแสดงว่า COM3 (หรือCOM4)
+6. หลังอัพโหลดเสร็จแล้ว ให้ไปที่ Tools -> Serial Monitor
+  ![Screenshot 2021-04-01 015827](https://user-images.githubusercontent.com/81258597/113196507-c8b0b500-928d-11eb-8b9b-00d4fe179e27.png)
 
-```javascript
-; IOT for KIDS
-;
-; By Dr.Choompol Boonmee
-; 
+7. เปิด Serial Monitor ของ Arduino ตั้งค่า baud rate 115200 และปรับช่องในรูปให้เป็น Both NL&CR
+รอจนกระทั่งขึ้นคำว่า Received String:
+แสดงว่าโปเจคเรา พร้อมทํางาน แล้ว
 
-[env:exercise01]
-platform = espressif8266
-board = esp01_1m
-framework = arduino
-board_build.flash_mode = dout
+![Screenshot 2021-04-01 015914](https://user-images.githubusercontent.com/81258597/113196588-e120cf80-928d-11eb-8cd7-77c19ea24b94.png)
 
-upload_port = /dev/cu.usbserial-1420
-;upload_port = COM3
+*  ทดสอบโดย เว็บเบราเซอร์ (web browser)
+    เริ่มด้วย เปิด เว็บเบราเซอร์ (web browser) ขึ้นมา
+    คำสั่ง LED=ON และ LED=OFF ต้องพิมพ์เป็นภาษาอังกฤษตัวพิมพ์ใหญ่ เท่านั้น
 
-monitor_port = /dev/cu.usbserial-1420
-;monitor_port = COM3
-monitor_speed = 115200
-```
 
-5.อัพโหลดโปรแกรม 07_Sensor-wifi เข้าไปยัง microcontroller โดยใช้คำสั่ง upload
-- พิมพ์ pio run -t upload
-- ในขณะที่ program กำลังรันข้อมูล เพื่อให้ microcontroller รับโปรแกรมใหม่เข้าไป
-  - กดปุ่มสีดำ เพื่อทำให้เกิดการ load 
-  - กดปุ่มสีแดง เพื่อให้เกิดการ reset
- - ทำการกดปุ่มสีดำ เพื่อให้ทำการอัพโหลดได้
- - เมื่อโปรแกรมถูกอัพโหลดเสร็จสิ้น โปรแกรมจะทำงานโดยการตรวจสอบที่ port 0 ว่ามี input มาหรือไม่
-    - ถ้า input เป็น 1 ไฟจะติดที่ port 2
-    - ถ้า input เป็น 0 ไฟจะไม่ติด
-- โดยเราจะสามารถสังเกตผลลัพธ์ที่แสดงผลผ่านคอมพิวเตอร์
-  - พิมพ์ pio device monitor
-   - กดปุ่มสีแดง เพื่อทำการ reset โปรแกรม  โดยโปรแกรมจะหยุดทำงานและเริ่มนับ 1 ใหม่
- 
-6. ใช้โทรศัพท์มือถือค้นหา wifi ในกรณีที่ input เป็น 1
-   - สังเกต wifi ที่เกิดขึ้นจากการสร้าง
+    พิมพ์ http://192.168.1.51/LED=ON
+    หรือ 192.168.1.51/LED=ON
+    Enter
+    ไฟ LED จะติด
+
+    พิมพ์ http://192.168.1.51/LED=OFF
+    หรือ 192.168.1.51/LED=OFF
+    Enter
+    ไฟ LED จะดับ
+
 
 ## การบันทึกผลการทดลอง 
-  จากการทดลองได้ลองทำการปรับเปลี่ยนcode programจากเดิม โดยข้อมูลที่เปลี่ยนโดยสำคัญคือชื่อและรหัสผ่านของwifi ที่อยู่ไอพี,gateway รวมไปถึง subnet ให้เป็นที่อยู่ปัจจุบันที่อยู่ โดยทำการค้นหาในcontrol panel ซึ่งจริงๆแล้วสามารถทำได้อีกวิธีผ่านการเข้า comman prompt และพิมพ์ว่า IPCONFIG ข้อมูลที่ต้องการก็จะขึ้นมาเช่นกัน ซึ่งโครงสร้างเกี่ยวกับโค้ดในการสร้างwifi จากแลป5,6 นอกจากนี้ยังได้ทำการแทรกหลอด LED เปล่งแสงผ่านการเชื่อมต่อ port ต่างๆที่ได้นำความรู้จากแลปที 4 จากนั้นจึงทำการเปลี่ยนinputจากเดิมในแลปที่อาจารย์ยกตัวอย่างให้เป็น 1 ไฟจึงติด และเมื่อไฟติด เราจึงทำการค้นหาสัญญาณwifiได้ จึงเป็นสาเหตุที่ทำให้เกิดการประยุกต์การทดลองนี้ขึ้นมาและทดสอบผ่านการพิมพ์ pio run -t upload เพื่ออัพโหลดโปรแกรม 07_Sensor-wifi เข้าไปยัง microcontroller จากนั้นอาศัยคำสั่ง pio device monitor ที่ใช้ดูผลลัพธ์ของโปรแกรมที่ถูกอัพโหลดเข้าไป 
-ซึ่งในที่นี้จะแสดงผลออกมาว่า ver started เพื่อตรวจสอบการแสดงผลของ wifi โดยทดลองค้นหาด้วยโทรศัพท์มือถือ ทำให้พบกับ wifi ที่เราทำการสร้างขึ้นมา
+  เราจะสามารถเปิดปิดไฟได้ผ่านทางการพิมพ์เข้าไปได้ผ่านเว็บได้เเต่ต้องเป็น IP ของwifi ที่เราทำการเชื่อมต่ออยู่ ไฟจะติดหรือดับเราสามารถกำหนดได้เองผ่านตัวเว็บที่เราทำการเชื่อเข้ากับตัวโปรเเกรม
 
 ## อภิปรายผลการทดลอง 
   เนื่องจากการทดลองนี้อาศัยการประยุกต์และรวบรวมข้อมูลผ่านความรู้ที่ได้ทำการศึกษาจากทุกแลป และด้วยสถานการณ์การแพร่ระบาดของโรค COVID-19 ทำให้ไม่สามารถทำการทดสอบโค้ดของโปรแกรมที่เขียนขึ้นมาใหม่ได้ว่ามีความถูกต้องหรือไม่ แต่ด้วยความรู้ที่มีจึงนำมาประยุกต์ออกมาได้เป็นการทดลองที่ 7 ดังที่ได้เขียนและกล่าวไปในข้างต้น 
 
 ## คำถามหลังการทดลอง 
-
+ในการจะเขียนให้ไฟติดหรือดับต้องเป็นตัวใหญ่ หรือ ตัวเล็ก
+* ตอบ ตัวใหญ่เสมอ
 
