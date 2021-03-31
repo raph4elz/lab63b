@@ -17,15 +17,19 @@
 ## แหล่งข้อมูลเพื่อการศึกษา
 - หาที่อยู่ IP adress 
   1. กดค้นหาตรง Windows ว่า Control Pane
-   ![Screenshot 2021-04-01 001820]
+   ![Screenshot 2021-04-01 001820](https://user-images.githubusercontent.com/81258597/113185894-34405580-9281-11eb-9ba6-ca1f98c352af.png)
   2. ในหน้าต่างของ Control Panel, คลิกที่ Network and Internet
-   ![Screenshot 2021-04-01 002010]
+   ![Screenshot 2021-04-01 002010](https://user-images.githubusercontent.com/81258597/113185925-3b676380-9281-11eb-92bb-d3428ea38327.png)
+
   3. ในหน้าต่างของ Network and Sharing Center, ในส่วนของ View your active networks, ที่อยู่กับ Connections, ให้คลิกที่ลิงค์ของการเชื่อมต่อเครือข่าย
-    ![Uploading Screenshot 2021-04-01 002135.png…]()
+    ![Screenshot 2021-04-01 002135](https://user-images.githubusercontent.com/81258597/113185943-402c1780-9281-11eb-9280-d69f48757080.png)
+
   4. ในหน้าต่างของ Network Connection Status, คลิกที่ปุ่ม Details
-    ![Screenshot 2021-04-01 002225]
+    ![Screenshot 2021-04-01 002225](https://user-images.githubusercontent.com/81258597/113185960-44583500-9281-11eb-9b62-2197d36e1da7.png)
+
   5.ในหน้าต่างของ Network Connection Details, ต่อจาก IPv4 IP Address จะมี IP address แสดงขึ้นมา.
-    ![Uploading Screenshot 2021-04-01 002341.png…]()
+    ![Screenshot 2021-04-01 002341](https://user-images.githubusercontent.com/81258597/113185976-491ce900-9281-11eb-9bea-5c4a84da1651.png)
+
 
 
 
