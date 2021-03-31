@@ -10,7 +10,7 @@
 2. adapter
 3. หลอด LED เปล่งแสง
 4. microcontroller ESP-01
-5. อุปกรณ์เชื่อมต่อ USB เข้าไปยัง serial![Screenshot 2021-04-01 002135](https://user-images.githubusercontent.com/81258597/113185125-4077e300-9280-11eb-83f2-fdb309fe7097.png)
+5. อุปกรณ์เชื่อมต่อ USB เข้าไปยัง serial
 
 6. wifi ที่ต้องการเชื่อมกับ microcontroller
 
