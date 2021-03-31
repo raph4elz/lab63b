@@ -10,14 +10,24 @@
 2. adapter
 3. หลอด LED เปล่งแสง
 4. microcontroller ESP-01
-5. อุปกรณ์เชื่อมต่อ USB เข้าไปยัง serial
+5. อุปกรณ์เชื่อมต่อ USB เข้าไปยัง serial![Screenshot 2021-04-01 002135](https://user-images.githubusercontent.com/81258597/113185125-4077e300-9280-11eb-83f2-fdb309fe7097.png)
+
 6. wifi ที่ต้องการเชื่อมกับ microcontroller
 
 ## แหล่งข้อมูลเพื่อการศึกษา
 - หาที่อยู่ IP adress 
-  - https://www.sony.co.th/th/electronics/support/articles/00022321
+  1. กดค้นหาตรง Windows ว่า Control Pane
+   ![Screenshot 2021-04-01 001820](https://user-images.githubusercontent.com/81258597/113184798-d6f7d480-927f-11eb-9fb9-38f1a94d0549.png)
+  2. ในหน้าต่างของ Control Panel, คลิกที่ Network and Internet
+   ![Screenshot 2021-04-01 002010](https://user-images.githubusercontent.com/81258597/113184993-132b3500-9280-11eb-9324-e509b7ad9cc2.png)
+  3. ในหน้าต่างของ Network and Sharing Center, ในส่วนของ View your active networks, ที่อยู่กับ Connections, ให้คลิกที่ลิงค์ของการเชื่อมต่อเครือข่าย
+    ![Uploading Screenshot 2021-04-01 002135.png…]()
+  4. ในหน้าต่างของ Network Connection Status, คลิกที่ปุ่ม Details
+    ![Screenshot 2021-04-01 002225](https://user-images.githubusercontent.com/81258597/113185201-5b4a5780-9280-11eb-98f6-75a080d41624.png)
+  5.ในหน้าต่างของ Network Connection Details, ต่อจาก IPv4 IP Address จะมี IP address แสดงขึ้นมา.
+    ![Uploading Screenshot 2021-04-01 002341.png…]()
 
-![image](https://user-images.githubusercontent.com/80879966/112862419-f0621a80-90df-11eb-8075-2d66230fb73b.jpg)
+
 
 - คลิปวิดิโอจากแลปต่างๆ
   - แลป 1 https://www.youtube.com/watch?v=NLIUsWLEpmg
