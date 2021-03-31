@@ -63,24 +63,27 @@
   - https://github.com/choompol-boonmee/lab63b/tree/master/examples
 
 ## วิธีการทำการทดลอง
-1. ต้องแก้ไข ไอพี ของ ESP8266 ESP-01 ให้ตรงกับที่เราได้รับมาจาก Router
+ 1. ต้องแก้ไข ไอพี ของ ESP8266 ESP-01 ให้ตรงกับที่เราได้รับมาจาก Router
 
 ![Screenshot 2021-04-01 005030](https://user-images.githubusercontent.com/81258597/113188464-48d21d00-9284-11eb-9fb2-27b302c2556d.png)
 
 
-2. การต่อวงจร ระหว่าง ESP8266 ESP-01 กับ Arduino UNO
+ 2. การต่อวงจร ระหว่าง ESP8266 ESP-01 กับ Arduino UNO
+
 ![Screenshot 2021-04-01 012649](https://user-images.githubusercontent.com/81258597/113192742-5a69f380-9289-11eb-9a12-e666bbdb0750.png)
 
 
-3. ต่อวงจร ระหว่าง Relay กับ Arduino UNO
+ 3. ต่อวงจร ระหว่าง Relay กับ Arduino UNO
+  
   ![Screenshot 2021-04-01 012736](https://user-images.githubusercontent.com/81258597/113192829-779ec200-9289-11eb-8d9c-8c7f43096044.png)
 
-4. ต่อวงจร ระหว่าง UNO+ Relay + LED + รางถ่าน
-   ![Screenshot 2021-04-01 015722](https://user-images.githubusercontent.com/81258597/113196394-a9198c80-928d-11eb-9ada-12edb4aa98f6.png)
-
+ 4. ต่อวงจร ระหว่าง UNO+ Relay + LED + รางถ่าน
+  
+  ![Screenshot 2021-04-01 015722](https://user-images.githubusercontent.com/81258597/113196394-a9198c80-928d-11eb-9ada-12edb4aa98f6.png)
 
 
 5. อัพโหลดโค้ด ไปยัง  Arduino UNO   
+
 ```javascript
 #include <SoftwareSerial.h>
 
